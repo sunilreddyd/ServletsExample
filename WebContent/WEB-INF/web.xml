@@ -26,4 +26,15 @@
     <url-pattern>/ServletWebXMLExample01</url-pattern>
     <url-pattern>/ServletWebXMLExample02</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>JSPExample</servlet-name>
+  	<jsp-file>/JSPExample.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>JSPExample</servlet-name>
+  	<url-pattern>/JSPExample</url-pattern>
+  	<url-pattern>/JSPPOSTExample</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
