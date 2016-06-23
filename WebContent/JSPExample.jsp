@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<%! 
+<%!
 	int k = 10;
 	int n = 15;
 %>
@@ -25,9 +25,34 @@
 
 Today's Date is : <%=new Date() %><br><br><br>
 Sum of <%=k %> and <%=n %> is: <%=add(k,n) %>
-
+	
 <%-- This is JSP comment --%>
+<br><br><br>
+
+This is my POST page for JSP<br>
+Full Name--><%=request.getParameter("firstName")%> and <%=request.getParameter("lastName") %><br>
+You are--><%=request.getParameter("gender") %><br>
+
 <%
+	String[] graduation = request.getParameterValues("graduation");
+	for(String grade: graduation){
+%>
+Studied--><%=grade%><br>
+<%
+	}
+%>
+
+<%
+	String[] vehicles = request.getParameterValues("vehicle");
+	for(String vehicle: vehicles){
+%>
+<br>You have --><%=vehicle %>
+<%
+	}
+%>
+
+<%
+
 pageContext.getAttribute("Name", pageContext.APPLICATION_SCOPE);
 
 %>
